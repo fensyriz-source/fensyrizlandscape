@@ -1,136 +1,396 @@
-html
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fensyriz Landscape - Premium Gardening & Landscaping Services</title>
+    <title>FENSYRIZ LANDSCAPE | Turnkey Horticulture & Landscape Solutions</title>
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        .hero-bg {
-            background-linear: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&q=80');
-            background-size: cover;
-            background-position: center;
-        }
+        body { font-family: 'Poppins', sans-serif; }
+        .bg-green-brand { background-color: #8cc63f; }
+        .text-green-brand { color: #8cc63f; }
+        .border-green-brand { border-color: #8cc63f; }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans">
+<body class="bg-gray-50 text-gray-800 antialiased">
 
-    <!-- Navigation -->
-    <nav class="bg-emerald-800 text-white shadow-md sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-            <div class="flex items-center space-x-2">
-                <i class="fa-solid fa-leaf text-emerald-400 text-2xl"></i>
-                <span class="font-bold text-xl tracking-wide">FENSYRIZ LANDSCAPE</span>
+    <!-- TOP BAR -->
+    <div class="bg-black text-white text-xs sm:text-sm py-2 px-4">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center space-x-6">
+                <a href="tel:8485905555" class="hover:text-green-400 flex items-center gap-2">
+                    <i class="fas fa-phone text-green-brand"></i> +91 8485905555
+                </a>
+                <a href="mailto:fensyriz@gmail.com" class="hover:text-green-400 flex items-center gap-2">
+                    <i class="fas fa-envelope text-green-brand"></i> fensyriz@gmail.com
+                </a>
             </div>
-            <div class="hidden md:flex space-x-6 font-medium">
-                <a href="#home" class="hover:text-emerald-300 transition">Home</a>
-                <a href="#services" class="hover:text-emerald-300 transition">Services</a>
-                <a href="#about" class="hover:text-emerald-300 transition">About Us</a>
-                <a href="#contact" class="hover:text-emerald-300 transition">Contact</a>
+            <div class="flex items-center space-x-4">
+                <span><i class="fas fa-shield-alt text-green-brand"></i> GSTIN: 24ABSPZ3624J1Z1</span>
             </div>
-            <a href="#contact" class="bg-emerald-500 hover:bg-emerald-600 text-white px-4 py-2 rounded-lg text-sm font-semibold transition">Get Quote</a>
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="sticky top-0 bg-white shadow-md z-50">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+            <!-- LOGO -->
+            <a href="#" class="flex items-center">
+                <svg width="240" height="50" viewBox="0 0 350 75" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M 50 45 C 100 12, 200 8, 310 32" fill="none" stroke="#8cc63f" stroke-width="6" stroke-linecap="round"/>
+                    <path d="M 210 20 Q 225 8 235 16 Q 220 28 210 20 Z" fill="#8cc63f"/>
+                    <path d="M 260 25 Q 275 13 285 21 Q 270 33 260 25 Z" fill="#8cc63f"/>
+                    <text x="10" y="55" font-family="'Poppins', sans-serif" font-weight="800" font-size="46" fill="#8cc63f">FE</text>
+                    <text x="64" y="55" font-family="'Poppins', sans-serif" font-weight="800" font-size="46" fill="#111111">SYRIZ</text>
+                    <text x="50" y="70" font-family="'Poppins', sans-serif" font-weight="700" font-size="14" fill="#111111" letter-spacing="4">LANDSCAPE</text>
+                </svg>
+            </a>
+
+            <!-- NAV LINKS -->
+            <div class="hidden lg:flex space-x-6 font-semibold text-sm text-gray-700">
+                <a href="#about" class="hover:text-green-600 transition">About</a>
+                <a href="#industries" class="hover:text-green-600 transition">Industries</a>
+                <a href="#services" class="hover:text-green-600 transition">Services</a>
+                <a href="#products" class="hover:text-green-600 transition">Products</a>
+                <a href="#clients" class="hover:text-green-600 transition">Clients</a>
+                <a href="#calculator" class="hover:text-green-600 transition">Cost Estimator</a>
+                <a href="#contact" class="hover:text-green-600 transition">Contact</a>
+            </div>
+
+            <a href="https://wa.me/918485905555" target="_blank" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full font-semibold shadow flex items-center gap-2 text-sm">
+                <i class="fab fa-whatsapp text-lg"></i> WhatsApp
+            </a>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="relative bg-emerald-900 text-white py-24 px-4 sm:px-6 lg:px-8 text-center hero-bg">
-        <div class="max-w-4xl mx-auto py-12 bg-black/40 rounded-2xl backdrop-blur-sm p-8">
-            <h1 class="text-4xl sm:text-6xl font-extrabold mb-4">Transforming Outdoors into Paradise</h1>
-            <p class="text-lg sm:text-xl text-gray-200 mb-8">Professional Landscape Design, Garden Maintenance & Lawn Care Solutions tailored for your home and business.</p>
-            <div class="flex justify-center gap-4">
-                <a href="#services" class="bg-emerald-500 hover:bg-emerald-600 text-white font-semibold px-6 py-3 rounded-lg transition">Explore Services</a>
-                <a href="#contact" class="bg-white text-emerald-900 hover:bg-gray-100 font-semibold px-6 py-3 rounded-lg transition">Contact Us</a>
+    <!-- HERO SECTION -->
+    <section class="relative bg-gradient-to-r from-gray-900 via-green-950 to-black text-white py-24 px-4">
+        <div class="max-w-7xl mx-auto text-center">
+            <span class="bg-green-brand text-black font-extrabold text-xs uppercase tracking-widest px-4 py-1.5 rounded-full inline-block mb-4">Founded in March 2010</span>
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
+                Complete Turnkey Landscape & <br><span class="text-green-brand">Horticulture Solutions</span>
+            </h1>
+            <p class="text-gray-300 text-lg max-w-3xl mx-auto mb-8">
+                We make your space beautiful. Specialized in Landscape Design, Sports Field Construction, Automated Sprinklers, AMC Maintenance, and Material Supply.
+            </p>
+            <div class="flex justify-center gap-4 flex-wrap">
+                <a href="#calculator" class="bg-green-brand hover:bg-green-600 text-black font-bold px-8 py-3.5 rounded-lg shadow-lg transition">
+                    Instant Cost Calculator
+                </a>
+                <a href="#services" class="border border-white hover:bg-white hover:text-black font-bold px-8 py-3.5 rounded-lg transition">
+                    Explore All Services
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12">
-            <h2 class="text-3xl font-bold text-emerald-900">Our Premium Services</h2>
-            <p class="text-gray-600 mt-2">Comprehensive landscaping solutions designed for maximum beauty and endurance.</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- Service 1 -->
-            <div class="bg-white rounded-xl shadow-md p-6 border border-gray-100 hover:shadow-lg transition">
-                <div class="w-12 h-12 bg-emerald-100 text-emerald-700 rounded-lg flex items-center justify-center text-2xl mb-4">
-                    <i class="fa-solid fa-compass-drafting"></i>
-                </div>
-                <h3 class="text-xl font-bold mb-2 text-gray-900">Landscape Design</h3>
-                <p class="text-gray-600">Custom 3D and 2D outdoor layouts tailored to complement your property's natural aesthetic.</p>
-            </div>
-
-            <!-- Service 2 -->
-            <div class="bg-white rounded-xl shadow-md p-6 border border-gray-100 hover:shadow-lg transition">
-                <div class="w-12 h-12 bg-emerald-100 text-emerald-700 rounded-lg flex items-center justify-center text-2xl mb-4">
-                    <i class="fa-solid fa-seedling"></i>
-                </div>
-                <h3 class="text-xl font-bold mb-2 text-gray-900">Garden Maintenance</h3>
-                <p class="text-gray-600">Routine pruning, lawn mowing, fertilizing, and weed control to keep your garden lush all year round.</p>
-            </div>
-
-            <!-- Service 3 -->
-            <div class="bg-white rounded-xl shadow-md p-6 border border-gray-100 hover:shadow-lg transition">
-                <div class="w-12 h-12 bg-emerald-100 text-emerald-700 rounded-lg flex items-center justify-center text-2xl mb-4">
-                    <i class="fa-solid fa-faucet-drip"></i>
-                </div>
-                <h3 class="text-xl font-bold mb-2 text-gray-900">Smart Irrigation</h3>
-                <p class="text-gray-600">Water-efficient automatic drip and sprinkler systems designed to save water while keeping plants healthy.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="bg-emerald-50 py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center">
+    <!-- MISSION, VISION & ABOUT -->
+    <section id="about" class="py-20 max-w-7xl mx-auto px-4">
+        <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
             <div>
-                <h2 class="text-3xl font-bold text-emerald-900 mb-4">Why Choose Fensyriz Landscape?</h2>
-                <p class="text-gray-700 mb-6 leading-relaxed">At <strong>Fensyriz Landscape</strong>, we combine sustainable green architecture with innovative design. Whether you need a private residential sanctuary or a modern commercial green landscape, our expert team guarantees unmatched craftsmanship and attention to detail.</p>
-                <ul class="space-y-3 font-medium text-gray-800">
-                    <li class="flex items-center"><i class="fa-solid fa-circle-check text-emerald-600 mr-3"></i> Experienced & Passionate Horticulturists</li>
-                    <li class="flex items-center"><i class="fa-solid fa-circle-check text-emerald-600 mr-3"></i> Eco-Friendly & Sustainable Practices</li>
-                    <li class="flex items-center"><i class="fa-solid fa-circle-check text-emerald-600 mr-3"></i> Affordable Maintenance Packages</li>
-                </ul>
+                <h2 class="text-3xl font-extrabold text-gray-900 mb-2">Company Overview</h2>
+                <div class="w-20 h-1.5 bg-green-brand mb-6"></div>
+                <p class="text-gray-600 mb-4 leading-relaxed">
+                    <strong>FENSYRIZ LANDSCAPE</strong> is a dynamic Horticulture & Landscape company founded by <strong>Mrs. Saroj Zala</strong> in March 2010. With over 14 years of industry-specific experience, we specialize in tendered projects, external site works, town planning, and complete garden maintenance.
+                </p>
+                <p class="text-gray-600 mb-6 leading-relaxed">
+                    Our design philosophy is to provide a healthy, comfortable, beautiful, and sustainable environment by combining scientific nature elements with creative design techniques.
+                </p>
+                <div class="grid grid-cols-2 gap-4 border-t pt-6">
+                    <div>
+                        <h4 class="text-2xl font-bold text-green-600">March 2010</h4>
+                        <p class="text-sm text-gray-500">Established Year</p>
+                    </div>
+                    <div>
+                        <h4 class="text-2xl font-bold text-green-600">100% QA</h4>
+                        <p class="text-sm text-gray-500">Internal Quality Tested Plants</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MISSION & VISION CARD -->
+            <div class="space-y-6">
+                <div class="bg-white p-6 rounded-xl shadow-md border-l-8 border-green-brand">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2"><i class="fas fa-bullseye text-green-brand mr-2"></i> Our Mission</h3>
+                    <p class="text-gray-600 text-sm">To delight our customers by offering tailor-made solutions to meet their interior and exterior landscaping needs through an efficiently managed business that contributes towards a greener environment.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md border-l-8 border-gray-900">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2"><i class="fas fa-eye text-green-brand mr-2"></i> Our Vision</h3>
+                    <p class="text-gray-600 text-sm">To become a market leader in indoor/outdoor plant plantation, development, maintenance, and landscape services by provision of quality products and pursuing excellent customer service while embracing environmental ethos in India.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INDUSTRIES WHERE WE SERVE -->
+    <section id="industries" class="py-16 bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-extrabold text-green-brand mb-2">Industries Where We Serve</h2>
+            <div class="w-20 h-1.5 bg-green-brand mx-auto mb-10"></div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6">
+                <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-green-brand transition">
+                    <i class="fas fa-city text-3xl text-green-brand mb-3"></i>
+                    <h4 class="font-bold text-sm">Townships</h4>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-green-brand transition">
+                    <i class="fas fa-industry text-3xl text-green-brand mb-3"></i>
+                    <h4 class="font-bold text-sm">Industrial</h4>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-green-brand transition">
+                    <i class="fas fa-home text-3xl text-green-brand mb-3"></i>
+                    <h4 class="font-bold text-sm">Residential</h4>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-green-brand transition">
+                    <i class="fas fa-car text-3xl text-green-brand mb-3"></i>
+                    <h4 class="font-bold text-sm">Automobile</h4>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-green-brand transition">
+                    <i class="fas fa-graduation-cap text-3xl text-green-brand mb-3"></i>
+                    <h4 class="font-bold text-sm">Education</h4>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-green-brand transition">
+                    <i class="fas fa-hospital text-3xl text-green-brand mb-3"></i>
+                    <h4 class="font-bold text-sm">Hospitals</h4>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-green-brand transition">
+                    <i class="fas fa-road text-3xl text-green-brand mb-3"></i>
+                    <h4 class="font-bold text-sm">Road Side Corp.</h4>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-green-brand transition">
+                    <i class="fas fa-pills text-3xl text-green-brand mb-3"></i>
+                    <h4 class="font-bold text-sm">Pharma Sector</h4>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-green-brand transition">
+                    <i class="fas fa-futbol text-3xl text-green-brand mb-3"></i>
+                    <h4 class="font-bold text-sm">Sports Stadiums</h4>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-green-brand transition">
+                    <i class="fas fa-building text-3xl text-green-brand mb-3"></i>
+                    <h4 class="font-bold text-sm">Corporate Offices</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES DETAILED SECTION -->
+    <section id="services" class="py-20 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900">Services & Solutions</h2>
+                <div class="w-20 h-1.5 bg-green-brand mx-auto my-4"></div>
+                <p class="text-gray-600">Turnkey engineering, horticulture care, and groundskeeping.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white rounded-xl shadow-md p-6 border-t-4 border-green-brand">
+                    <i class="fas fa-pen-nib text-3xl text-green-brand mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Design Build Landscape</h3>
+                    <p class="text-gray-600 text-sm mb-4">Complete project lifecycle from design planning to full site execution using high quality natural resources.</p>
+                </div>
+                <!-- Service 2 -->
+                <div class="bg-white rounded-xl shadow-md p-6 border-t-4 border-green-brand">
+                    <i class="fas fa-seedling text-3xl text-green-brand mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Horticulture Services</h3>
+                    <p class="text-gray-600 text-sm mb-4">Own nursery production, seed centers, soil enrichment, and customized plant selection.</p>
+                </div>
+                <!-- Service 3 -->
+                <div class="bg-white rounded-xl shadow-md p-6 border-t-4 border-green-brand">
+                    <i class="fas fa-leaf text-3xl text-green-brand mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Indoor & Outdoor Maintenance</h3>
+                    <p class="text-gray-600 text-sm mb-4">Turf care, mowing, foliage shaping, leaf cleaning, pest prevention, artificial grass installation, and pot fixing.</p>
+                </div>
+                <!-- Service 4 -->
+                <div class="bg-white rounded-xl shadow-md p-6 border-t-4 border-green-brand">
+                    <i class="fas fa-trophy text-3xl text-green-brand mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Sports Club & Stadium Care</h3>
+                    <p class="text-gray-600 text-sm mb-4">Cricket pitch development, football fields, tennis courts, golf courses, line marking, and hedge cutting.</p>
+                </div>
+                <!-- Service 5 -->
+                <div class="bg-white rounded-xl shadow-md p-6 border-t-4 border-green-brand">
+                    <i class="fas fa-faucet text-3xl text-green-brand mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Automated Irrigation Systems</h3>
+                    <p class="text-gray-600 text-sm mb-4">Drip and sprinkler installation, rainwater harvesting, misting systems, and water-waste reduction engineering.</p>
+                </div>
+                <!-- Service 6 -->
+                <div class="bg-white rounded-xl shadow-md p-6 border-t-4 border-green-brand">
+                    <i class="fas fa-users-cog text-3xl text-green-brand mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Civil Works & Manpower</h3>
+                    <p class="text-gray-600 text-sm mb-4">Bulk earthworks, road construction, stormwater drains, gardener labor, and management supervisors.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCTS & NURSERY CATALOG -->
+    <section id="products" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-extrabold text-gray-900">Products & Nursery Supply</h2>
+                <div class="w-20 h-1.5 bg-green-brand mx-auto my-4"></div>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-6 text-sm">
+                <div class="p-6 bg-gray-50 rounded-xl border">
+                    <h4 class="font-bold text-lg mb-3 text-green-600"><i class="fas fa-tree mr-2"></i> Plants & Pots</h4>
+                    <ul class="space-y-2 text-gray-600">
+                        <li>• Indoor & Outdoor Plants</li>
+                        <li>• Pots & Planters</li>
+                        <li>• Garden Furniture</li>
+                        <li>• Gazebos, Trellis & Fences</li>
+                        <li>• Soil & Wooden Chips</li>
+                    </ul>
+                </div>
+                <div class="p-6 bg-gray-50 rounded-xl border">
+                    <h4 class="font-bold text-lg mb-3 text-green-600"><i class="fas fa-spa mr-2"></i> Grass & Shrubs</h4>
+                    <ul class="space-y-2 text-gray-600">
+                        <li>• Carpet Lawn / Grass</li>
+                        <li>• Loose Grass Varieties</li>
+                        <li>• All Ornamental Shrubs</li>
+                        <li>• Vegetable Plants & Seeds</li>
+                    </ul>
+                </div>
+                <div class="p-6 bg-gray-50 rounded-xl border">
+                    <h4 class="font-bold text-lg mb-3 text-green-600"><i class="fas fa-vial mr-2"></i> Organic Fertilizers</h4>
+                    <ul class="space-y-2 text-gray-600">
+                        <li>• Vermi Compost</li>
+                        <li>• Organic Fertilizers</li>
+                        <li>• Plant Growth Chemicals</li>
+                        <li>• Pest Treatment Formulas</li>
+                    </ul>
+                </div>
+                <div class="p-6 bg-gray-50 rounded-xl border">
+                    <h4 class="font-bold text-lg mb-3 text-green-600"><i class="fas fa-tools mr-2"></i> Tools & Irrigation</h4>
+                    <ul class="space-y-2 text-gray-600">
+                        <li>• Grass Cutters & Grinders</li>
+                        <li>• Irrigation Pipes & Pumps</li>
+                        <li>• Sprinkler Systems</li>
+                        <li>• Playground Equipment</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAJOR CLIENTS -->
+    <section id="clients" class="py-20 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-extrabold text-gray-900 mb-2">Major Prestigious Clients</h2>
+            <div class="w-20 h-1.5 bg-green-brand mx-auto mb-10"></div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 font-bold text-lg text-gray-800">
+                <div class="p-6 bg-white border rounded-lg shadow-sm">ADANI GROUP</div>
+                <div class="p-6 bg-white border rounded-lg shadow-sm">ADANI SHANTIGRAM</div>
+                <div class="p-6 bg-white border rounded-lg shadow-sm">TATA PROJECTS</div>
+                <div class="p-6 bg-white border rounded-lg shadow-sm">CADILA PHARMA</div>
+                <div class="p-6 bg-white border rounded-lg shadow-sm">RELIANCE JIO</div>
+                <div class="p-6 bg-white border rounded-lg shadow-sm">SIEMENS</div>
+                <div class="p-6 bg-white border rounded-lg shadow-sm">PACIFICA COMPANIES</div>
+                <div class="p-6 bg-white border rounded-lg shadow-sm">BELVEDERE GOLF CLUB</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CALCULATOR SECTION -->
+    <section id="calculator" class="py-20 bg-gray-900 text-white">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-extrabold text-green-brand">Instant Landscape Cost Estimator</h2>
+                <p class="text-gray-400 mt-2">Get an instant estimate for your development site.</p>
+            </div>
+
+            <div class="bg-gray-800 p-8 rounded-2xl shadow-2xl border border-gray-700">
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Project Area (in Sq. Feet)</label>
+                        <input type="number" id="area" placeholder="e.g. 5000" class="w-full bg-gray-900 border border-gray-600 rounded-lg p-3 text-white focus:outline-none focus:border-green-brand">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Service Requirement</label>
+                        <select id="serviceType" class="w-full bg-gray-900 border border-gray-600 rounded-lg p-3 text-white focus:outline-none focus:border-green-brand">
+                            <option value="45">Basic Lawn & Softscaping (₹45/sq ft)</option>
+                            <option value="90">Complete Design & Garden Plantation (₹90/sq ft)</option>
+                            <option value="150">Premium Landscape + Automated Sprinklers (₹150/sq ft)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button onclick="calculateEstimate()" class="w-full bg-green-brand hover:bg-green-600 text-black font-bold py-3.5 rounded-lg transition">
+                    Calculate Estimated Budget
+                </button>
+
+                <div id="result" class="hidden mt-6 p-4 bg-gray-900 rounded-lg border border-green-500 text-center">
+                    <p class="text-sm text-gray-400">Estimated Budget Range:</p>
+                    <h3 id="estimatedPrice" class="text-3xl font-extrabold text-green-brand my-2">₹0</h3>
+                    <p class="text-xs text-gray-400 mb-4">*Price varies based on site conditions and plant selections.</p>
+                    <a id="whatsappQuoteBtn" href="#" target="_blank" class="inline-block bg-green-500 hover:bg-green-600 text-white text-sm font-bold px-6 py-2.5 rounded-full">
+                        Request Site Survey on WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER & CONTACT -->
+    <footer id="contact" class="bg-black text-white pt-12 pb-6 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-8 mb-8">
+            <div>
+                <!-- FOOTER LOGO -->
+                <svg width="220" height="45" viewBox="0 0 350 75" xmlns="http://www.w3.org/2000/svg" class="mb-4">
+                    <path d="M 50 45 C 100 12, 200 8, 310 32" fill="none" stroke="#8cc63f" stroke-width="6" stroke-linecap="round"/>
+                    <path d="M 210 20 Q 225 8 235 16 Q 220 28 210 20 Z" fill="#8cc63f"/>
+                    <path d="M 260 25 Q 275 13 285 21 Q 270 33 260 25 Z" fill="#8cc63f"/>
+                    <text x="10" y="55" font-family="'Poppins', sans-serif" font-weight="800" font-size="46" fill="#8cc63f">FE</text>
+                    <text x="64" y="55" font-family="'Poppins', sans-serif" font-weight="800" font-size="46" fill="#ffffff">SYRIZ</text>
+                    <text x="50" y="70" font-family="'Poppins', sans-serif" font-weight="700" font-size="14" fill="#ffffff" letter-spacing="4">LANDSCAPE</text>
+                </svg>
+                <p class="text-gray-400 text-sm">We make your space beautiful. Turnkey solutions for landscape architecture, horticulture care, and groundskeeping.</p>
             </div>
             <div>
-                <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&q=80" alt="Landscaping work" class="rounded-xl shadow-lg w-full h-80 object-cover">
+                <h4 class="text-lg font-bold mb-4">Official Addresses</h4>
+                <p class="text-sm text-gray-400 mb-2"><strong>Reg. Address:</strong> 266, Vishat Mataji Mandir, At-Vajapur, Valad, Gandhinagar - 382355</p>
+                <p class="text-sm text-gray-400"><strong>Communication Address:</strong> Flat No. 102, Shree Maruti Apartment, Khoraj, Gandhinagar - 382421</p>
+            </div>
+            <div>
+                <h4 class="text-lg font-bold mb-4">Contact Details</h4>
+                <p class="text-sm text-gray-400 mb-2"><i class="fas fa-phone text-green-brand"></i> +91 8485905555</p>
+                <p class="text-sm text-gray-400 mb-2"><i class="fas fa-envelope text-green-brand"></i> fensyriz@gmail.com</p>
+                <p class="text-sm text-gray-400"><i class="fas fa-file-invoice text-green-brand"></i> GSTIN: 24ABSPZ3624J1Z1</p>
             </div>
         </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12">
-            <h2 class="text-3xl font-bold text-emerald-900">Contact Us</h2>
-            <p class="text-gray-600 mt-2">Let’s discuss how we can elevate your outdoor space.</p>
+        <div class="text-center text-xs text-gray-600 border-t border-gray-900 pt-6">
+            © 2026 FENSYRIZ LANDSCAPE. All Rights Reserved.
         </div>
-
-        <div class="max-w-2xl mx-auto bg-white rounded-xl shadow-md p-8 border border-gray-100">
-            <form action="#" method="POST" class="space-y-6">
-                <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
-                    <input type="text" placeholder="Your Name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:outline-none">
-                </div>
-                <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
-                    <input type="email" placeholder="you@example.com" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:outline-none">
-                </div>
-                <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-1">Message / Requirements</label>
-                    <textarea rows="4" placeholder="Tell us about your project..." required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:outline-none"></textarea>
-                </div>
-                <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 rounded-lg transition">Send Message</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-emerald-950 text-emerald-200 py-8 text-center border-t border-emerald-800">
-        <p>&copy; 2026 Fensyriz Landscape. All rights reserved.</p>
     </footer>
 
+    <!-- CALCULATOR SCRIPT -->
+    <script>
+        function calculateEstimate() {
+            const area = parseFloat(document.getElementById('area').value);
+            const rate = parseFloat(document.getElementById('serviceType').value);
+
+            if (!area || area <= 0) {
+                alert('Please enter a valid area size in square feet.');
+                return;
+            }
+
+            const total = area * rate;
+            const minEstimate = Math.round(total * 0.9).toLocaleString('en-IN');
+            const maxEstimate = Math.round(total * 1.1).toLocaleString('en-IN');
+
+            document.getElementById('estimatedPrice').innerText = ₹${minEstimate} - ₹${maxEstimate};
+            document.getElementById('result').classList.remove('hidden');
+
+            const msg = Hello FENSYRIZ LANDSCAPE, I used your website estimator. Area: ${area} sq.ft. Estimated budget: ₹${minEstimate} - ₹${maxEstimate}. I want to request a site quotation.;
+            document.getElementById('whatsappQuoteBtn').href = https://wa.me/918485905555?text=${encodeURIComponent(msg)};
+        }
+    </script>
 </body>
 </html>
